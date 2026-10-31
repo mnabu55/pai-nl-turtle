@@ -4,7 +4,7 @@
 
 Physical AI 応用編1 最終課題の提出物です。
 
-- デモ動画：（YouTube のURLを記載予定）
+- デモ動画：https://youtu.be/COAbA897g2Q
 
 ## 仕組み
 
