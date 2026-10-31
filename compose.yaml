@@ -1,0 +1,10 @@
+services:
+  sim:
+    # ROS 2 Humble desktop reachable from a browser (noVNC). Multi-arch: runs natively on Apple Silicon and x86_64.
+    # Pinned by digest so everyone gets the same image the project was tested with.
+    image: tiryoh/ros2-desktop-vnc:humble@sha256:b9eed044a3a3ab090081cd2126a10cfe952175ebfabf5bc48eb3944bd1679158
+    ports:
+      - "${VNC_PORT:-6080}:80"
+    shm_size: 512m
+    volumes:
+      - .:/home/ubuntu/pai-nl-turtle

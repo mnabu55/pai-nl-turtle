@@ -1,0 +1,18 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validator:
+    # The planner/validator are pure Python, so they are tested without ROS or the Gemini API.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: pip install pytest
+      - run: python -m pytest -q test/
+        working-directory: ros2_ws/src/nl_turtle
